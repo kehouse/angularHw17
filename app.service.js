@@ -3,13 +3,17 @@ angular
   .service('NewSharkPost', function($http){
 
     function postShark(shark){
-      return $http.post('http://tiny-tiny.herokuapp.com/collections/shark', shark)
-  }
-  function getSharks(){
-    return $http.get('http://tiny-tiny.herokuapp.com/collections/shark')
-  }
+      return $http.post('http://tiny-tiny.herokuapp.com/collections/sharks', shark)
+    }
+    function getSharks(){
+      return $http.get('http://tiny-tiny.herokuapp.com/collections/sharks')
+    }
+    function deleteSharks(id){
+      return $http.delete('http://tiny-tiny.herokuapp.com/collections/sharks/' + id)
+    }
     return {
       postShark: postShark,
-      getSharks: getSharks
+      getSharks: getSharks,
+      deleteSharks: deleteSharks
     }
   });

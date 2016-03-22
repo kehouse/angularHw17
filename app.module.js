@@ -10,4 +10,8 @@ angular
         templateUrl: "templates/create.html",
         controller: "CreateController"
       })
+      .when('/posts', {
+        templateUrl: "templates/posts.html",
+        controller: "PostController"
+      })
   })
