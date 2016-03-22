@@ -1,0 +1,21 @@
+<div class="" ng-contoller="CreateController">
+
+<h1>New Shark Tooth Find</h1>
+<form class="create">
+  <input type="text" placeholder="Enter Date" ng-model="sharkPost.date">
+  <input type="text" placeholder="Enter Location" ng-model="sharkPost.location">
+  <input type="text" placeholder="Enter Quantity" ng-model="sharkPost.quantity">
+  <input type="text" placeholder="Enter Shark Species" ng-model="sharkPost.species">
+  <input type="text" placeholder="Enter Image" ng-model="sharkPost.image">
+</form>
+<button class='btn btn-lg btn-success' ng-click="getSharkData(sharkPost)" name="button">Create</button>
+
+<ul ng-repeat="shark in sharks">
+  <li>Date: {{shark.date}}</li>
+  <li>Location: {{shark.location}}</li>
+  <li>Quantity: {{shark.quantity}}</li>
+  <li>Shark Species: {{shark.type}}</li>
+  <li><img ng-src="{{shark.image}}" alt="" /></li>
+</ul>
+
+</div>
