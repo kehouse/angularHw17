@@ -1,10 +1,10 @@
-<ul ng-repeat="shark in sharks">
-  <li>Date: {{shark.date}}</li>
-  <li>Location: {{shark.location}}</li>
-  <li>Quantity: {{shark.quantity}}</li>
-  <li>Shark Species: {{shark.type}}</li>
-  <li><img ng-src="{{shark.image}}" alt="" /></li>
-  <button class='btn btn-md btn-success' ng-click="deleteShark(shark)" name="button">Delete</button>
-</ul>
+<a class="btn btn-danger btn-lg create-new-btn" href="/#/create" role="button">Create New Post</a></p>
 
-<a class='btn btn-lg btn-success' href="/#/" role="button">Back</a>
+<div ng-repeat="shark in sharks" class="row col-xs-6 col-md-4">
+  <p>Date: {{shark.date}}</p>
+  <p>Location: {{shark.location}}</p>
+  <p>Quantity: {{shark.quantity}}</p>
+  <p>Shark Species: {{shark.species}}</p>
+  <p><img ng-src="{{shark.image}}" alt="" class="images" /></p>
+  <button class='btn btn-md btn-success' ng-click="deleteShark(shark)" name="button">Delete</button>
+</div>
